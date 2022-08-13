@@ -1,0 +1,204 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class='flex justify-between'>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{profileData.first_name}} {{profileData.last_name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ titlePage }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <div class="flex justify-around mt-4">
+      <!-- <select class="select select-bordered max-w-xs">
+        <option disabled selected>Todas las tiendas</option>
+        <option>Naranjo</option>
+        <option>Zona 10</option>
+        <option>Av. las Americas</option>
+      </select>
+  
+      <select class="select select-bordered max-w-xs mx-1">
+        <option disabled selected>Todos los pilotos</option>
+        <div *ngFor="let driver of drivers">
+          <option>{{driver.first_name}} {{driver.last_name}}</option>
+        </div>
+      </select> -->
+      <div>
+        <div class="dropdown">
+          <label tabindex="0" class="btn m-1">Todas las tiendas <ion-icon name="chevron-down-outline" class="ml-2">
+            </ion-icon></label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Naranjo</a></li>
+            <li><a>Zona 10</a></li>
+            <li><a>Avenida las Americas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="dropdown dropdown-end">
+          <label tabindex="0" class="btn m-1">Todos los pilotos <ion-icon name="chevron-down-outline" class="ml-2">
+            </ion-icon></label>
+          <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <div *ngFor="let driver of drivers">
+              <li><a>{{driver.first_name}} {{driver.last_name}}</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-evenly  mt-7">
+      <label>
+        <span class="text-black block">Todos</span>
+        <input type="radio" name="radio-4" class="block radio radio-accent" checked />
+      </label>
+      <label>
+        <span class="text-black block">Pendientes</span>
+        <input type="radio" name="radio-4" class="block radio radio-accent" />
+      </label>
+      <label>
+        <span class="text-black block">Entregados</span>
+        <input type="radio" name="radio-4" class="block radio radio-accent" />
+      </label>
+    </div>
+
+    <div class="stats shadow mt-8 mx-1 justify-center flex">
+
+      <div class="stat place-items-center">
+        <div class="stat-title">Jueves</div>
+        <div class="stat-value">11</div>
+        <div class="stat-desc">Agosto</div>
+      </div>
+
+      <div class="stat place-items-center">
+        <div class="stat-title">Viernes</div>
+        <div class="stat-value text-secondary">12</div>
+        <div class="stat-desc text-secondary">Agosto</div>
+      </div>
+
+      <div class="stat place-items-center">
+        <div class="stat-title">Elegir</div>
+        <button type="button" class="stat-value">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </button>
+        <div class="stat-desc">Fecha</div>
+      </div>
+
+    </div>
+
+    <div class="stats shadow mt-2 mx-1 justify-center flex">
+
+      <div class="stat">
+        <div class="stat-figure text-secondary">
+          <div class="avatar online">
+            <div class="w-16 rounded-md">
+              <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/wallet.png" />
+            </div>
+          </div>
+        </div>
+        <div class="stat-value text-secondary">Q2,245</div>
+        <div class="stat-desc">Total por cobrar</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-figure text-secondary">
+          <div class="avatar online">
+            <div class="w-16 rounded-md">
+              <img src="https://www.remaxcompras.com/wp-content/uploads/2020/05/paquete.png" />
+            </div>
+          </div>
+        </div>
+        <div class="stat-value">18</div>
+        <div class="stat-title">Paquetes</div>
+      </div>
+
+    </div>
+
+
+    <div class="max-w-md mt-5 mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div class="md:flex">
+        <div class="p-8 w-full">
+
+          <div class="flex justify-between">
+            <div class="text-cyan-500  text-lg uppercase tracking-wide">28091</div>
+            <div class="text-cyan-500 text-2xl font-bold">Q495</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-lg uppercase tracking-wide text-black font-bold">Jessica Rachel Reyes Candelabro</div>
+            <button class="bg-blue-100 block justify-end btn btn-outline btn-info">Pedido</button>
+          </div>
+          <div class="text-xs mt-2 text-black font-medium">.
+            <ion-icon name="location-outline"></ion-icon>
+            Guatemala, Ciudad Capital *Sector 12, Manzana D, Casa 1, Residencial los olivos, Zona 18. Zona 18
+          </div>
+          <div class="text-xs mt-2 text-black font-medium">.
+            <ion-icon name="call-outline"></ion-icon>
+            42119087 50498646
+          </div>
+          <div class="text-xs mt-2 text-black font-medium">.
+            <ion-icon name="person-circle-outline"></ion-icon>
+            Jonathan Soto
+          </div>
+
+          <div class="flex justify-between mt-2">
+            <button class="bg-indigo-200 btn btn-outline btn-primary">Abrazola</button>
+            <button class="bg-blue-100 block justify-end btn btn-outline btn-info">Transito con Mensajero</button>
+          </div>
+
+          <div class="alert alert-warning shadow-lg mt-2">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              <span>Meter en Bolsa de Regalo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+    <div class="max-w-md mt-5 mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div class="md:flex">
+        <div class="p-8 w-full">
+
+          <div class="flex justify-between">
+            <div class="text-cyan-500  text-lg uppercase tracking-wide">28091</div>
+            <div class="text-lime-600 text-2xl font-bold">Pagado</div>
+          </div>
+          <div class="flex justify-between">
+            <div class="text-lg uppercase tracking-wide text-black font-bold">Jessica Rachel Reyes Candelabro</div>
+            <button class="bg-blue-100 block justify-end btn btn-outline btn-info">Pedido</button>
+          </div>
+          <div class="text-xs mt-2 text-black font-medium">.
+            <ion-icon name="location-outline"></ion-icon>
+            Lote 40, Residenciales altos de la atlántida Zona 18 zona 18
+          </div>
+          <div class="text-xs mt-2 text-black font-medium">.
+            <ion-icon name="call-outline"></ion-icon>
+            42119087 50498646
+          </div>
+          <div class="text-xs mt-2 text-black font-medium">.
+            <ion-icon name="person-circle-outline"></ion-icon>
+            Jonathan Soto
+          </div>
+
+          <div class="flex justify-between mt-2">
+            <button class="bg-indigo-200 btn btn-outline btn-primary">Abrazola</button>
+            <button class="bg-blue-100 block justify-end btn btn-outline btn-info">Transito con Mensajero</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
